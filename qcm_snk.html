@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - L'Attaque des Titans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QCM - L'Attaque des Titans</h1>
+    </header>
+
+    <form id="quizForm" onsubmit="checkAnswers(event)">
+        <h2>1. Qui est le protagoniste principal de "L'Attaque des Titans"?</h2>
+        <label><input type="radio" name="q1" value="a"> Eren Yeager</label>
+        <label><input type="radio" name="q1" value="b"> Mikasa Ackerman</label>
+        <label><input type="radio" name="q1" value="c"> Armin Arlert</label>
+
+        <h2>2. Quel est le nom du Titan colossal?</h2>
+        <label><input type="radio" name="q2" value="a"> Bertholdt Hoover</label>
+        <label><input type="radio" name="q2" value="b"> Reiner Braun</label>
+        <label><input type="radio" name="q2" value="c"> Annie Leonhart</label>
+
+        <h2>3. Qui est le meilleur ami d'Eren?</h2>
+        <label><input type="radio" name="q3" value="a"> Mikasa</label>
+        <label><input type="radio" name="q3" value="b"> Armin</label>
+        <label><input type="radio" name="q3" value="c"> Levi</label>
+
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <script>
+        function checkAnswers(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+            
+            // Récupération des réponses
+            const form = document.getElementById('quizForm');
+            const formData = new FormData(form);
+            const answers = [];
+            for (let value of formData.values()) {
+                answers.push(value);
+            }
+
+            // Vérification des réponses
+            const correctAnswers = ['a', 'a', 'b'];
+            let correctCount = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            // Affichage des résultats
+            alert(`Nombre de réponses correctes : ${correctCount} / ${correctAnswers.length}`);
+        }
+    </script>
+</body>
+</html>
+
+

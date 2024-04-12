@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats du QCM</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Résultats du QCM</h1>
+    </header>
+
+    <section>
+        <h2>Merci d'avoir soumis le QCM</h2>
+        <p id="result"></p>
+        <p id="incorrect"></p>
+    </section>
+
+    <script>
+        // Récupération des résultats depuis l'URL
+        const urlParams = new URLSearchParams(result.faux.html);
+        const correctCount = urlParams.get('correctCount');
+        const totalQuestions = urlParams.get('totalQuestions');
+        const incorrectQuestions = urlParams.get('incorrectQuestions');
+
+        // Affichage des résultats
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = `Vous avez répondu incorrectement à ${3} questions sur un total de ${3}.`;
+
+        // Affichage des questions incorrectes
+        const incorrectDiv = document.getElementById('incorrect');
+        if (incorrectQuestions) {
+            const incorrectList = JSON.parse(incorrectQuestions);
+            if (incorrectList.length > 0) {
+                incorrectDiv.innerHTML = '<p>Questions incorrectes :</p>';
+                const ul = document.createElement('ul');
+                incorrectList.forEach(question => {
+                    const li = document.createElement('li');
+                    li.textContent = question;
+                    li.classList.add('incorrect');
+                    ul.appendChild(li);
+                });
+                incorrectDiv.appendChild(ul);
+            } else {
+                incorrectDiv.textContent = 'Toutes les réponses étaient incorrectes. !';
+            }
+        }
+    </script>
+
+</body>
+</html>
+

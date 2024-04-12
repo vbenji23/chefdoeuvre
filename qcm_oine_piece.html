@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - One Piece</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: left;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>QCM - One Piece</h1>
+    </header>
+
+    <section>
+        <form id="quizForm" action="result.html" method="post">
+            <!-- Question 1 -->
+            <h2>1. Quel est le fruit du démon de Luffy?</h2>
+            <label><input type="radio" name="q1" value="a"> Gomu Gomu no Mi</label>
+            <label><input type="radio" name="q1" value="b"> Mera Mera no Mi</label>
+            <label><input type="radio" name="q1" value="c"> Bara Bara no Mi</label>
+            <label><input type="radio" name="q1" value="d"> Gura Gura no Mi</label>
+
+            <!-- Question 2 -->
+            <h2>2. Quel est le nom du bateau de Luffy?</h2>
+            <label><input type="radio" name="q2" value="a"> Thousand Sunny</label>
+            <label><input type="radio" name="q2" value="b"> Red Force</label>
+            <label><input type="radio" name="q2" value="c"> Going Merry</label>
+            <label><input type="radio" name="q2" value="d"> Oro Jackson</label>
+
+            <!-- Ajoutez d'autres questions ici -->
+
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+
+</body>
+</html>
+
