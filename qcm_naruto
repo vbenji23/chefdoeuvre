@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM - One Piece</title>
+    <title>QCM - Naruto</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,8 +15,8 @@
         .container {
             max-width: 600px;
             margin: 20px auto;
-            padding: 30px;
             background-color: #fff;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -68,22 +68,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>QCM - One Piece</h1>
+        <h1>QCM - Naruto</h1>
         <form id="quizForm" onsubmit="checkAnswers(event)">
-            <h2>1. Qui est le capitaine de l'équipage du Chapeau de Paille?</h2>
-            <label><input type="radio" name="q1" value="a"> Monkey D. Luffy</label>
-            <label><input type="radio" name="q1" value="b"> Roronoa Zoro</label>
-            <label><input type="radio" name="q1" value="c"> Nami</label>
+            <h2>1. Quel est le nom complet du protagoniste principal de Naruto?</h2>
+            <label><input type="radio" name="q1" value="a"> Naruto Uzumaki</label>
+            <label><input type="radio" name="q1" value="b"> Sasuke Uchiha</label>
+            <label><input type="radio" name="q1" value="c"> Sakura Haruno</label>
 
-            <h2>2. Quel est le nom du bateau de Luffy?</h2>
-            <label><input type="radio" name="q2" value="a"> Thousand Sunny</label>
-            <label><input type="radio" name="q2" value="b"> Going Merry</label>
-            <label><input type="radio" name="q2" value="c"> Red Force</label>
+            <h2>2. Quel est le nom du sensei de l'équipe 7?</h2>
+            <label><input type="radio" name="q2" value="a"> Kakashi Hatake</label>
+            <label><input type="radio" name="q2" value="b"> Iruka Umino</label>
+            <label><input type="radio" name="q2" value="c"> Might Guy</label>
 
-            <h2>3. Qui est considéré comme le meilleur épéiste du monde?</h2>
-            <label><input type="radio" name="q3" value="a"> Monkey D. Luffy</label>
-            <label><input type="radio" name="q3" value="b"> Roronoa Zoro</label>
-            <label><input type="radio" name="q3" value="c"> Trafalgar Law</label>
+            <h2>3. Quel est le village d'origine de Naruto?</h2>
+            <label><input type="radio" name="q3" value="a"> Konoha</label>
+            <label><input type="radio" name="q3" value="b"> Suna</label>
+            <label><input type="radio" name="q3" value="c"> Kiri</label>
 
             <button type="submit">Soumettre</button>
         </form>
@@ -102,7 +102,7 @@
             }
 
             // Vérification des réponses
-            const correctAnswers = ['a', 'b', 'b'];
+            const correctAnswers = ['a', 'a', 'a'];
             let correctCount = 0;
             for (let i = 0; i < correctAnswers.length; i++) {
                 if (answers[i] === correctAnswers[i]) {
@@ -116,3 +116,4 @@
     </script>
 </body>
 </html>
+
